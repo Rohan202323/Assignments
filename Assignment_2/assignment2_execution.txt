@@ -1,0 +1,70 @@
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Monday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Monday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Monday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Tuesday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Tuesday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Tuesday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Wednesday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Wednesday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Wednesday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Thursday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Thursday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Thursday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Friday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Friday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Friday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Saturday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Saturday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Saturday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ short_form 06-03-2024 12:08:54 {'args': ('Sunday',), 'kwargs': {}}
+Function short_form executed in 0.0 seconds
+__main__ lower 06-03-2024 12:08:54 {'args': ('Sunday',), 'kwargs': {}}
+Function lower executed in 0.0 seconds
+__main__ upper 06-03-2024 12:08:54 {'args': ('Sunday',), 'kwargs': {}}
+Function upper executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Monday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Tuesday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Wednesday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Thursday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Friday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Saturday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ count_char_occurrences 06-03-2024 12:08:54 {'args': ('Sunday',), 'kwargs': {}}
+Function count_char_occurrences executed in 0.0 seconds
+__main__ tables 06-03-2024 12:26:05 {'args': (), 'kwargs': {}}
+Function tables executed in 0.002991199493408203 seconds
+__main__ table_into_excel 06-03-2024 14:24:25 {'args': (), 'kwargs': {}}
+Function table_into_excel executed in 0.45554351806640625 seconds
+__main__ employee_name_top_most_salary 06-03-2024 15:15:20 {'args': ('Employee.xlsx',), 'kwargs': {}}
+Function employee_name_top_most_salary executed in 0.03539848327636719 seconds
+__main__ bussiness_unit_name 06-03-2024 15:15:20 {'args': ('Employee.xlsx',), 'kwargs': {}}
+Function bussiness_unit_name executed in 0.017514705657958984 seconds
+__main__ employee_name_with_high_salary 06-03-2024 15:15:20 {'args': ('Employee.xlsx',), 'kwargs': {}}
+Function employee_name_with_high_salary executed in 0.012604236602783203 seconds
+__main__ delete_employee_least_salary 06-03-2024 15:15:20 {'args': ('Employee.xlsx',), 'kwargs': {}}
+Function delete_employee_least_salary executed in 0.08435535430908203 seconds
+__main__ update_employee_salary 06-03-2024 15:15:20 {'args': ('Employee.xlsx', 50, 50000), 'kwargs': {}}
+Function update_employee_salary executed in 0.07131242752075195 seconds
