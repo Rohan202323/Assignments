@@ -45,7 +45,7 @@ class Employee:
         }
 
     @staticmethod
-    def to_json(employees, filename="Employees.json"):
+    def to_json(employees, filename="Employee_all.json"):
         """This is the static method which is used to write in the json file.."""
 
         if not isinstance(employees, list):
@@ -58,21 +58,7 @@ class Employee:
         with open(filename, "w",encoding='utf-8') as file:
             json.dump(data, file, indent=4)
 
-    @staticmethod
-    def from_json(filename="Employees.json"):
-        """This is the from_json_file"""
-        with open(filename, "r",encoding='utf-8') as file:
-            database = json.load(file)
-
-        data = []
-        for employee_data in database:
-            employee = Employee(employee_data["EMP ID"], employee_data["EMP NAME"],
-                                employee_data["EMP EMAIL"], employee_data["Business Unit"],
-                                employee_data["Salary"])
-            data.append(employee)
-
-        return data
-
+    
 if __name__=="__main__":
     emp1 = Employee("1001", "Mohan raj", "Mohan.raj@example.com", "HR", 70000)
     emp2 = Employee("1002", "Jack Doe", "jack.doe@example.com", "Market", 80000)
@@ -80,4 +66,5 @@ if __name__=="__main__":
 
     emp1.to_json([emp1], "employee1.json")
     Employee.to_json([emp1, emp2, emp3], "employees_list.json")
-    Employee.to_json(Employee.from_json())
+    emp_all = [emp1,emp2,emp3]
+    Employee.to_json(emp_all)
