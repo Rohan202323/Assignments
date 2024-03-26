@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 EXCEL_FILE = "Order.xlsx"
 order_details = pd.read_excel(EXCEL_FILE, sheet_name="Order Details",engine="openpyxl")
 
-# Iterate over each order in the order details
+
 for index, order in order_details.iterrows():
     user = order["User Type"]
     product_name = order["Product Name"]
@@ -30,7 +30,7 @@ for index, order in order_details.iterrows():
     # Add the product to the cart
     add_to_cart_button = driver.find_element(By.XPATH, f"//*[text()='{product_name}']/ancestor::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']/button")
     add_to_cart_button.click()
-    time.sleep(1)  # Wait for the cart to update
+    time.sleep(1) 
 
     cart_item_count = driver.find_element(
             By.XPATH, '//*[@class="fa-layers-counter shopping_cart_badge"]'
