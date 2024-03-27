@@ -14,10 +14,7 @@ order_excel = pd.read_excel(ORDER_FILE_PATH)
 # Create a new Excel file
 OUTPUT_FILE_PATH = 'C:/Users/rohan.rai/Python/saucedemo.xlsx'
 with pd.ExcelWriter(OUTPUT_FILE_PATH) as writer:
-    # Iterate through each sheet in the User Excel file
     for sheet_name, sheet_data in user_excel.items():
-        # Write each sheet to the output Excel file
-        print(sheet_name,"----------",sheet_data)
         sheet_data.to_excel(writer, sheet_name=sheet_name, index=False)
     
     # Append the Order sheet to the output Excel file
