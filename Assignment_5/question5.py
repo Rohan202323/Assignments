@@ -12,17 +12,9 @@ wb = load_workbook(EXCEL_FILE)
 ws = wb['Order Details']
 
 
-<<<<<<< HEAD
 # Iterate over each row in the ws
 for row in ws.iter_rows(min_row=2, values_only=True):
     order_id, user_type, product_name, quantity, total_price, order_status = row
-=======
-for index, order in order_details.iterrows():
-    user = order["User Type"]
-    product_name = order["Product Name"]
-    quantity = order["Quantity"]
-    expected_price = order["Total Price"]
->>>>>>> 1956363ecf45e26e4011aa687e653be40decd549
 
     driver = web.weblauch()
 
@@ -37,11 +29,7 @@ for index, order in order_details.iterrows():
     # Add the product to the cart
     add_to_cart_button = driver.find_element(By.XPATH, f"//*[text()='{product_name}']/ancestor::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']/button")
     add_to_cart_button.click()
-<<<<<<< HEAD
     time.sleep(1)
-=======
-    time.sleep(1) 
->>>>>>> 1956363ecf45e26e4011aa687e653be40decd549
 
     cart_item_count = driver.find_element(By.XPATH, '//*[@class="fa-layers-counter shopping_cart_badge"]').text
 
