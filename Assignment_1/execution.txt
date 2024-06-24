@@ -1,10 +1,10 @@
-__main__ wrapper 06-03-2024 11:36:50 {'args': ('HAPPIESTMINDS',), 'kwargs': {}}
-Function wrapper executed in 0.001325845718383789 seconds
-__main__ count_process 06-03-2024 11:39:42 {'args': (), 'kwargs': {}}
-Function count_process executed in 3.689629554748535 seconds
-__main__ processes 06-03-2024 11:44:32 {'args': (), 'kwargs': {}}
-Function processes executed in 0.6263790130615234 seconds
-__main__ reverse_words 06-03-2024 11:52:47 {'args': ('My name is Rohan',), 'kwargs': {}}
+__main__ wrapper 08-05-2024 13:57:41 {'args': ('HAPPIESTMINDS',), 'kwargs': {}}
+Function wrapper executed in 0.0009970664978027344 seconds
+__main__ count_process 08-05-2024 13:58:19 {'args': (), 'kwargs': {}}
+Function count_process executed in 3.537121057510376 seconds
+__main__ kill_processes 08-05-2024 13:59:11 {'args': (), 'kwargs': {}}
+Function kill_processes executed in 2.655590772628784 seconds
+__main__ reverse_words 08-05-2024 14:00:01 {'args': ('My name is Suraj',), 'kwargs': {}}
 Function reverse_words executed in 0.0 seconds
-__main__ fibonacci_sequence 06-03-2024 11:55:09 {'args': (5,), 'kwargs': {}}
+__main__ fibonacci_sequence 08-05-2024 14:00:42 {'args': (8,), 'kwargs': {}}
 Function fibonacci_sequence executed in 0.0 seconds

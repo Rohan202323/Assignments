@@ -1,69 +1,57 @@
-'''
+"""
 (iii) Write a program to monitor the applications running on your system. 
 To test: Execute any application like browser, notepad, calculator etc and make sure 
 that not more than 2 instances of the same application can be running.
-'''
+"""
 
-
-import datetime
-import time
 import psutil
+from Logger import Logger
+
+application_counts = [
+    {"process_Name": "chrome.exe", "max_Instances": 2},
+    {
+        "process_Name": "notepad.exe",
+        "max_Instances": 2,
+    },
+    {"process_Name": "calc.exe", "max_Instances": 2},
+    {"process_Name": "msedge.exe", "max_Instances": 2},
+    {"process_Name": "firefox.exe", "max_Instances": 2},
+]
 
 
-def log_function_call(func):
-    """Log the function call and execution time"""
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = func(*args, **kwargs)
-        end_time = time.time()
-        with open("execution.txt", "a", encoding="utf-8") as file:
-            current_time = datetime.datetime.now()
-            formatted_time = current_time.strftime("%d-%m-%Y %H:%M:%S")
-            arguments = {"args": args, "kwargs": kwargs}
-            file.write(
-                f"{func.__module__} {func.__name__} {formatted_time} {arguments}\n"
-                f"Function {func.__name__} executed in {end_time - start_time} seconds\n"
+def count_instances(process):
+    """It counts the running instances of the particular application"""
+
+    count = 0
+    running_applications = psutil.process_iter(["name"])
+
+    # Iterate through each Process in monitor
+    for p in running_applications:
+        if p.info["name"] == process:
+            count += 1
+
+            # If the no. of running instances exceeds the maximum allowed instances,
+            # kill the process
+            if count > 2:
+                p.kill()
+    return count
+
+
+@Logger.log_function_call
+def kill_processes():
+    """Kill processes with counts greater than 2"""
+    for app in application_counts:
+        process_name = app["process_Name"]
+        max_instances = app["max_Instances"]
+
+        run_instances = count_instances(process_name)
+
+        if run_instances > max_instances:
+            print(
+                f"Warning: More than {max_instances} instances of {process_name} running!"
             )
-        return result
-
-    return wrapper
-
-
-
-@log_function_call
-def processes():
-    """process"""
-    application_counts = {}
-    for process in psutil.process_iter(['name']):
-        app_name = process.info['name']
-        if app_name in application_counts:
-            application_counts[app_name] += 1
         else:
-            application_counts[app_name] = 1
-    for app_name, count in application_counts.items():
-        if count > 2:
-            print(f"Warning: More than 2 instances of {app_name} running!")
-
-processes()
+            print(f"{process_name}: {run_instances}/{max_instances}")
 
 
-
-
-
-
-
-
-# import psutil
-
-
-# application_counts = {}
-# for process in psutil.process_iter(['name']):
-#     app_name = process.info['name']
-#     if app_name in application_counts:
-#         application_counts[app_name] += 1
-#     else:
-#         application_counts[app_name] = 1
-# for app_name, count in application_counts.items():
-#     if count > 2:
-#         print(f"Warning: More than 2 instances of {app_name} running!")
-#     #print(f"{app_name} {count}")
+kill_processes()
